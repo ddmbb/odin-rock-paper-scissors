@@ -17,16 +17,6 @@ function game() {
 
 function playRound(compChoice, playerChoice) {
 
-    //computer choice
-
-    function getCompChoice() {
-        compChoice = (choices[(Math.floor(Math.random() * 3))]);
-        console.log(`Computer: ${compChoice}`);
-    }
-
-    getCompChoice();
-
-
     // player choice
 
     function getPlayerChoice() {
@@ -36,30 +26,44 @@ function playRound(compChoice, playerChoice) {
 
     getPlayerChoice();
 
+    //computer choice
+
+    function getCompChoice() {
+        compChoice = (choices[(Math.floor(Math.random() * 3))]);
+        console.log(`Computer: ${compChoice}`);
+    }
+
+    getCompChoice();
 
     //compare choices
 
-    if (playerChoice == compChoice) {
-        gameCount++;
-        console.log(`---Result: Tie---`);
-        console.log(`Player Score: ${playerScore}`);
-        console.log(`Computer Score: ${compScore}`);
-        console.log(`===Game Count: ${gameCount}===`);
-    } else if (playerChoice == 'rock' && compChoice == 'scissors' || playerChoice == 'paper' && compChoice == 'rock' || playerChoice == "scissors" && compChoice == 'paper') {
-        playerScore++;
-        gameCount++;
-        console.log(`---Result: Player Wins---`);
-        console.log(`Player Score: ${playerScore}`);
-        console.log(`Computer Score: ${compScore}`);
-        console.log(`===Game Count: ${gameCount}===`);
-    } else {
-        compScore++;
-        gameCount++;
-        console.log(`---Result: Computer Wins---`);
-        console.log(`Player Score: ${playerScore}`);
-        console.log(`Computer Score: ${compScore}`);
-        console.log(`===Game Count: ${gameCount}===`);
+    function compare() {
+        if (playerChoice == compChoice) {
+            gameCount++;
+            console.log(`===Result: Tie===`);
+            console.log(`Game Count: ${gameCount}`);
+            console.log(`Player Score: ${playerScore}`);
+            console.log(`Computer Score: ${compScore}`);
+            console.log('---Next Round---');
+        } else if (playerChoice == 'rock' && compChoice == 'scissors' || playerChoice == 'paper' && compChoice == 'rock' || playerChoice == "scissors" && compChoice == 'paper') {
+            playerScore++;
+            gameCount++;
+            console.log(`===Result: Player Wins===`);
+            console.log(`Game Count: ${gameCount}`);
+            console.log(`Player Score: ${playerScore}`);
+            console.log(`Computer Score: ${compScore}`);
+            console.log('---Next Round---');
+        } else {
+            compScore++;
+            gameCount++;
+            console.log(`===Result: Computer Wins===`);
+            console.log(`Game Count: ${gameCount}`);
+            console.log(`Player Score: ${playerScore}`);
+            console.log(`Computer Score: ${compScore}`);
+            console.log('---Next Round---');
+        }
     }
+    compare();
 }
 
 game();
