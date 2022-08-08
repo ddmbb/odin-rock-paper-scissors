@@ -16,8 +16,8 @@ button {
     background-color: black;
     color: white;
     font-size: 80px;
-    width: 12vw;
-    height: 12vw;
+    width: 200px;
+    height: 200px;
     border: 1px solid white;
 }
 
@@ -26,15 +26,17 @@ button:hover {
 }
 
 #paper {
-    margin-top: -1px;
+    /* margin-top: -1px; */
+    margin-left: -1px;
 }
 
 #scissors {
-    margin-top: -1px;
+    /* margin-top: -1px; */
+    margin-right: 1px;
 }
 
 #reset {
-    margin-top: 15%;
+    /* margin-top: 15%; */
 }
 
 /********* moves entire border on hover ********/
@@ -42,7 +44,7 @@ button:hover {
 .continue {
     margin-top: 6%;
     padding: 2% 0 2% 0;
-    width: 12vw;
+    width: 200px;
     font-size: 24px;
     height: 15%;
 }
@@ -55,17 +57,16 @@ button:hover {
 
 #container {
     margin: 0;
-    padding: 0;
+    padding: 30px;
     display: flex;
     justify-content: center;
 }
 
 #choices {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    height: 100vh;
+    margin-top: 50px;
 }
 
 #results {
@@ -88,4 +89,32 @@ button:hover {
 #score {
     font-size: 20px;
     margin: 10% 0 10% 0;
+}
+
+/*** media queries ***/
+
+@media only screen and (max-width: 800px) {
+    #paper {
+        margin-top: -1px;
+        margin-left: 0px;
+    }
+
+    #scissors {
+        margin-top: -1px;
+        margin-right: 0px;
+    }
+
+    #choices {
+        flex-direction: column;
+        margin-top: 35px;
+    }
+
+    #container {
+        padding: 5px;
+    }
+
+    /*     
+        #reset {
+            margin-top: 15%;
+        } */
 }
