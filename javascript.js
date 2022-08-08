@@ -136,7 +136,6 @@ reset.addEventListener('click', function () {
     playerScore = 0;
     compScore = 0;
     gameCount = 0;
-    hideNext();
     hideResultsDiv();
     showChoicesDiv();
 });
@@ -144,19 +143,13 @@ reset.addEventListener('click', function () {
 // next-round click
 
 nextround.addEventListener('click', function () {
-    hideNext();
     hideResultsDiv();
     showChoicesDiv();
 });
 
 // hide+show next div
 
-function hideNext() {
-    document.getElementById('next').style.display = 'none';
-}
-
 function showNext() {
-    document.getElementById('next').style.display = 'inline';
     if (playerScore === 3 || compScore === 3) {
         document.getElementById('nextround').style.display = 'none';
         document.getElementById('reset').style.display = 'inline';
@@ -184,8 +177,4 @@ function hideChoicesDiv() {
 
 function showChoicesDiv() {
     document.getElementById('choices').style.display = 'inline';
-}
-
-function addChoices() {
-
 }
