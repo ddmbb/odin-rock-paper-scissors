@@ -52,52 +52,61 @@ function compare() {
         winner.textContent = `🪨`;
         verb.textContent = `ties`;
         loser.textContent = `🪨`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else if (playerChoice == 'rock' && compChoice == 'paper') {
         gameCount++;
         compScore++;
         winner.textContent = `🧻`;
         verb.textContent = `covers`;
         loser.textContent = `🪨`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else if (playerChoice == 'rock' && compChoice == 'scissors') {
         gameCount++;
         playerScore++;
         winner.textContent = `🪨`;
         verb.textContent = `smashes`;
         loser.textContent = `✂️`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else if (playerChoice == 'paper' && compChoice == 'rock') {
         gameCount++;
         playerScore++;
         winner.textContent = `🧻`;
         verb.textContent = `covers`;
         loser.textContent = `🪨`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else if (playerChoice == 'paper' && compChoice == 'paper') {
         gameCount++;
         winner.textContent = `🧻`;
         verb.textContent = `ties`;
         loser.textContent = `🧻`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else if (playerChoice == 'paper' && compChoice == 'scissors') {
         gameCount++;
         compScore++;
         winner.textContent = `✂️`;
         verb.textContent = `cuts`;
         loser.textContent = `🧻`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else if (playerChoice == 'scissors' && compChoice == 'rock') {
         gameCount++;
         compScore++;
         winner.textContent = `🪨`;
         verb.textContent = `smashes`;
         loser.textContent = `✂️`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else if (playerChoice == 'scissors' && compChoice == 'paper') {
         gameCount++;
         playerScore++;
         winner.textContent = `✂️`;
         verb.textContent = `cuts`;
         loser.textContent = `🧻`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     } else {
         gameCount++;
         winner.textContent = `✂️`;
         verb.textContent = `ties`;
         loser.textContent = `✂️`;
+        score.textContent = `Player: ${playerScore} Computer: ${compScore}`;
     }
 }
 
@@ -106,13 +115,16 @@ function compare() {
 function endGame() {
     if (playerScore === 3) {
         winner.textContent = ``;
-        verb.textContent = `Player wins ${playerScore} to ${compScore}`;
+        verb.textContent = ``;
         loser.textContent = ``;
+        score.textContent = `Player wins ${playerScore} to ${compScore}`
         showNext();
     } else if (compScore === 3) {
         winner.textContent = ``;
-        verb.textContent = `Computer wins ${compScore} to ${playerScore}`;
-        loser.textContent = ``; showNext();
+        verb.textContent = ``;
+        loser.textContent = ``;
+        score.textContent = `Computer wins ${compScore} to ${playerScore}`;
+        showNext();
     } else {
         showNext();
     }
@@ -161,7 +173,7 @@ function hideResultsDiv() {
 }
 
 function showResultsDiv() {
-    document.getElementById('results').style.display = 'inline';
+    document.getElementById('results').style.display = 'flex';
 }
 
 // hide+show choices div

@@ -44,13 +44,17 @@ button:hover {
 }
 
 #results {
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     font-size: 80px;
     align-items: center;
     margin-top: 5%;
+}
+
+#next {
+    display: none;
 }
 
 #verb {
