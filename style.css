@@ -26,20 +26,12 @@ button:hover {
 }
 
 #paper {
-    /* margin-top: -1px; */
     margin-left: -1px;
 }
 
 #scissors {
-    /* margin-top: -1px; */
     margin-right: 1px;
 }
-
-#reset {
-    /* margin-top: 15%; */
-}
-
-/********* moves entire border on hover ********/
 
 .continue {
     margin-top: 6%;
@@ -76,7 +68,7 @@ button:hover {
     text-align: center;
     font-size: 80px;
     align-items: center;
-    margin-top: 4%;
+    margin-top: 30px;
 }
 
 /* individuals */
@@ -112,9 +104,4 @@ button:hover {
     #container {
         padding: 5px;
     }
-
-    /*     
-        #reset {
-            margin-top: 15%;
-        } */
 }

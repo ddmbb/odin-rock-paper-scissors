@@ -28,6 +28,12 @@ scissors.addEventListener('click', function () {
     playRound();
 });
 
+rock.addEventListener('click', function () {
+    playerChoice = 'rock';
+    hideChoicesDiv();
+    playRound();
+});
+
 
 // get computer choice
 
@@ -40,7 +46,7 @@ function getCompChoice() {
 function playRound() {
     getCompChoice();
     compare();
-    showResultsDiv(); // needs to add a play again button
+    showResultsDiv();
     endGame();
 }
 
