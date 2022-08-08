@@ -68,7 +68,7 @@ button:hover {
     text-align: center;
     font-size: 80px;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 55px;
 }
 
 /* individuals */
@@ -103,5 +103,9 @@ button:hover {
 
     #container {
         padding: 5px;
+    }
+
+    #results {
+        margin-top: 80px;
     }
 }
