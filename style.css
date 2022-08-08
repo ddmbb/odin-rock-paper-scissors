@@ -4,27 +4,25 @@
     box-sizing: border-box;
 }
 
-.hide {
-    display: none;
-}
-
 body {
     background-color: black;
     color: white;
     font-family: 'Roboto', sans-serif;
 }
 
+/* buttons */
+
 button {
     background-color: black;
     color: white;
-    font-size: 48px;
-    width: 50vw;
-    height: 33%;
+    font-size: 80px;
+    width: 12vw;
+    height: 12vw;
     border: 1px solid white;
 }
 
 button:hover {
-    font-size: 44px;
+    font-size: 72px;
 }
 
 #paper {
@@ -33,6 +31,33 @@ button:hover {
 
 #scissors {
     margin-top: -1px;
+}
+
+#reset {
+    margin-top: 15%;
+}
+
+/********* moves entire border on hover ********/
+
+.continue {
+    margin-top: 6%;
+    padding: 2% 0 2% 0;
+    width: 12vw;
+    font-size: 24px;
+    height: 15%;
+}
+
+.continue:hover {
+    font-size: 20px;
+}
+
+/* divs */
+
+#container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 #choices {
@@ -50,38 +75,17 @@ button:hover {
     text-align: center;
     font-size: 80px;
     align-items: center;
-    margin-top: 5%;
+    margin-top: 4%;
 }
 
-#next {
-    display: none;
-}
+/* individuals */
 
 #verb {
-    font-size: 38px;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    font-size: 24px;
+    margin: 10% 0 10% 0;
 }
 
-#container {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-#reset {
-    margin-top: 2%;
-    font-size: 38px;
-    width: 25%;
-    justify-content: center;
-}
-
-#play-again {
-    display: flex;
-    justify-content: center;
-}
-
-#reset:hover {
-    font-size: 34px;
+#score {
+    font-size: 20px;
+    margin: 10% 0 10% 0;
 }

@@ -115,15 +115,19 @@ function compare() {
 function endGame() {
     if (playerScore === 3) {
         winner.textContent = ``;
-        verb.textContent = ``;
+        document.getElementById('verb').style.fontSize = '32px';
+        verb.textContent = `You win!`;
         loser.textContent = ``;
-        score.textContent = `Player wins ${playerScore} to ${compScore}`
+        document.getElementById('score').style.fontSize = '80px';
+        score.textContent = `🔥`
         showNext();
     } else if (compScore === 3) {
         winner.textContent = ``;
-        verb.textContent = ``;
+        document.getElementById('verb').style.fontSize = '32px';
+        verb.textContent = `You lose, Bitch!`;
         loser.textContent = ``;
-        score.textContent = `Computer wins ${compScore} to ${playerScore}`;
+        document.getElementById('score').style.fontSize = '80px';
+        score.textContent = `💩`;
         showNext();
     } else {
         showNext();
@@ -136,6 +140,8 @@ reset.addEventListener('click', function () {
     playerScore = 0;
     compScore = 0;
     gameCount = 0;
+    document.getElementById('verb').style.fontSize = '24px';
+    document.getElementById('score').style.fontSize = '20px';
     hideResultsDiv();
     showChoicesDiv();
 });
@@ -176,5 +182,5 @@ function hideChoicesDiv() {
 }
 
 function showChoicesDiv() {
-    document.getElementById('choices').style.display = 'inline';
+    document.getElementById('choices').style.display = 'flex';
 }
